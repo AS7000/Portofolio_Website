@@ -1,0 +1,83 @@
+.Navbar {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  font-weight: bold;
+  font-size: large;
+  width: 100%;
+  height: 100%;
+  gap: 40px; 
+}
+
+.Navbar > .Nav-component {
+  margin: 5px;
+  text-align: center;
+  cursor: pointer; 
+}
+
+.Nav-component:hover {
+  transform: scale(1.2);
+  color: #ff6347;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.Name{
+  padding: 2vh;
+  font-weight: bold;
+  align-self: flex-start;
+  justify-self: baseline;
+  font-family: Arizonia, Montserrat, Arial, Helvetica, sans-serif;
+  font-size: xx-large;
+}
+
+.light-mode {
+  background-color: #003135;
+  color: white;
+}
+
+.dark-mode {
+  background-color: #222;
+  color: #f9f9f9;
+}
+
+.light-mode-icon{
+  background-color: #003135;
+  color: white;
+  border: none;
+}
+.dark-mode-icon{
+  background-color: #003135;
+  color: white;
+  border: none;
+}
+
+.section.Header {
+  grid-template-columns: 0.8fr 0.7fr 0.8fr 0.8fr;
+  z-index: 10;
+  background-color: #003135;
+  position: sticky;
+  align-items: center; 
+  height: fit-content; 
+
+  top: 0;
+}
+
+.theme-toggle{
+  justify-self: center;
+  align-self: center;
+}
+
+.light-mode-icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  color: #ff6347;
+  transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.dark-mode-icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  color: #ff6347;
+  transition: transform 0.3s ease, color 0.3s ease; 
+}

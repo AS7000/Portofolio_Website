@@ -1,0 +1,37 @@
+:root {
+    --color1: #003135;
+    --color2: #024950;
+    --color3: #964734;
+    --color4: #0fa4af;
+    --color5: #afdde5;
+}
+
+
+.Answer_container{
+    grid-template-rows: 1fr 1fr;
+    height: 80vh;
+    background-image: url('../../assets/Future4.jpg');
+    background-size: cover;
+    background-position: bottom; 
+    background-repeat: no-repeat;
+    padding-top: 5px; /* Compensate for the overlap */
+    justify-content: center;
+    align-items: center;
+
+}
+
+    .Answer_container > .closing-sentence {
+        font-size: 2em; 
+        line-height: 1.5;
+        color: white; 
+        font-weight: bold; 
+        text-align: center; 
+        margin: 20px auto; 
+        max-width: 70%; 
+        padding: 20px; 
+        background: linear-gradient(90deg, rgba(0,128,128,0.1), rgba(255, 255, 255, 0.1)); 
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+      }
+      
+

@@ -1,0 +1,4 @@
+const philosophy_script =  `
+Reflecting on my journey, I see true innovation as the ability to transform the status quo, making that leap from 0 to 1, as Peter Thiel described it. I am committed to leveraging AI and software development to create solutions that make life easier and more efficient for everyone, all while keeping sustainability and our planet's well-being in mind. Striving for excellence, I understand that hard work must be directed with purpose and clarity to achieve meaningful impact. Every setback I encounter becomes an opportunity for growth, as I rise stronger, embracing challenges with resilience and determination.`;
+
+export default philosophy_script

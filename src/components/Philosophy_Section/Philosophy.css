@@ -1,0 +1,58 @@
+:root {
+    --color1: #003135;
+    --color2: #024950;
+    --color3: #964734;
+    --color4: #0fa4af;
+    --color5: #afdde5;
+}
+
+.philosophy {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.philosophy > .picture {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-image: url('../../assets/philosophy.jpg');
+    background-size: cover;
+    background-position: bottom center; /* Keeps the image centered */
+    background-repeat: no-repeat;
+}
+
+.philosophy > .my_philosophy {
+    width: 100%;
+    height: 105%;
+    background-color: #913924;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem; /* Optional: Add some padding for better spacing */
+    transform: translateY(-5%); /* Move upward */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1); /* Add a shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.my_philosophy > h1 {
+    font-size: 4rem;
+    margin: 0;
+    color: white;
+    text-align: center; /* Optional: Center-align the text */
+}
+
+.philosophy-text > p {
+    text-align: justify;      /* Ensures the text is spread evenly */
+    font-size: 1.8rem;        /* Adjusts paragraph font size */
+    font-weight: 400;         /* Regular font weight */
+    line-height: 1;         /* Improves readability with better spacing */
+    margin-bottom: 1rem;      /* Adds space between paragraphs */
+}
+
+.philosophy-text > p::first-letter {
+    font-size: 2rem;          /* Enlarges the first letter */
+    font-weight: bold;        /* Makes the first letter bold */
+    color: var(--color4);     /* Changes the first letter's color */
+}

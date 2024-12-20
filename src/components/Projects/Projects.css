@@ -1,0 +1,53 @@
+:root{
+    --color1: #003135;
+    --color2: #024950;
+    --color3: #964734;
+    --color4: #0fa4af;
+    --color5: #afdde5;
+}
+
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.intro-card {
+    background-color: var(--color1);
+    text-align: center;
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 20px;
+    flex: 0 1 45%;
+    min-width: 300px;
+}
+
+.end-card {
+    background-color: var(--color1);
+    font-size: 2rem;
+    text-align: left;
+    flex: 0 1 45%;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects_end_title {
+    font-size: 3em;
+    color: white;
+}
+
+.projects_title {
+    font-size: 3em;
+    color: var(--color3);
+}
+
+.card {
+    flex: 0 1 45%;
+    min-width: 300px;
+    height: auto;
+}

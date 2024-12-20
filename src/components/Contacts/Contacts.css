@@ -1,0 +1,100 @@
+:root{
+    --color1: #003135;
+    --color2: #024950;
+    --color3: #964734;
+    --color4: #0fa4af;
+    --color5: #afdde5;
+}
+
+.Contacts_contatiner{
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+    .Contacts_contatiner > .Header_Contatiner{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color5);
+
+    }
+
+    .Contact_Header{
+        font-size: 3rem;
+        color: black;
+        margin-left: 20px;
+    }
+
+    .Contact_Subheader{
+        font-size: 1.5rem;
+        color: black;
+        margin-left: 20px;
+
+    }
+
+.contact-details {
+    background-color: var(--color1);
+    z-index: 2;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.75); /* Shadow for 3D feel */
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    }
+
+    .contact-item {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .contact-item h3 {
+        margin: 0;
+        font-size: 3rem;
+    }
+
+    .contact-item p {
+        font-size: 2rem;
+        margin: 10px 0;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .social-icon {
+        text-decoration: none;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+        }
+
+    .social-icon:hover {
+        background-color: #ddd;
+    }
+    .contact-link {
+        text-decoration: none;
+        color: #0073e6; /* Blue color for links */
+        font-weight: bold;
+        transition: color 0.3s, transform 0.3s;
+    }
+    .contact-link:hover {
+        color: #005bb5;
+        transform: translateX(5px); /* Slide effect */
+    }
+    
+    .contact-link:focus {
+        outline: 2px solid #005bb5; /* Accessibility: focus outline */
+    }
+    

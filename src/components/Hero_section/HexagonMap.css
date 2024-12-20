@@ -1,0 +1,92 @@
+.hexagon-map {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the container */    width: 100%;
+    padding-bottom: 100%; /* This maintains a 1:1 aspect ratio */
+}
+
+.center-point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #735DA5;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* Each hexagon point */
+.hex-point {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #735DA5;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* Positioning hex points to form a hexagon */
+#point-1 { top: 16.5%; left: 50%; transform: translate(-50%, 0); }
+#point-2 { top: 31.5%; right: 21%; transform: translate(0, 0); }
+#point-3 { bottom: 32.5%; right: 21%; transform: translate(0, 0); }
+#point-4 { bottom: 16.5%; left: 50%; transform: translate(-50%, 0); }
+#point-5 { bottom: 32.5%; left: 21%; transform: translate(0, 0); }
+#point-6 { top: 31.5%; left: 21%; transform: translate(0, 0); }
+
+/* Lines connecting points to the center */
+.line {
+    position: absolute;
+    background-color: grey;
+    z-index: 1;
+    transform-origin: top center;
+}
+
+#line-1 { width: 2px; height: 25%; top: 22%; left: 50%; transform: translateX(-50%) rotate(0deg); }
+#line-2 { width: 2px; height: 25%; top: 36%; left: 74%; transform: rotate(60deg); }
+#line-3 { width: 2px; height: 25%; top: 63.5%; left: 74%; transform: rotate(120deg); }
+#line-4 { width: 2px; height: 25%; top: 78%; left: 50%; transform: translateX(-50%) rotate(180deg); }
+#line-5 { width: 2px; height: 28%; top: 64%; left: 25%; transform: rotate(-120deg); }
+#line-6 { width: 2px; height: 28%; top: 35.5%; left: 25%; transform: rotate(-60deg); }
+
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: transparent; /* Set a background color */
+    border: 1px solid grey;
+    border-radius: 50%; /* Make it a circle */
+}
+
+#circle-1{width: 20%; height: 20%;}
+#circle-2{width: 40%; height: 40%;}
+#circle-3{width: 60%; height: 60%;}
+
+.attributes{
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: clamp(0.5rem, 1vw, 0.9rem); 
+    z-index: 3;
+    position: absolute;
+}
+
+#attribute-1 { top: 10%; left: 50%;transform: translate(-50%);}
+#attribute-2 { top: 26%; right: 1%; }
+#attribute-3 { bottom: 27%; right: 4%; }
+#attribute-4 { bottom: 10%; left: 51%;transform: translate(-50%); }
+#attribute-5 { bottom: 26%; left: 1%; }
+#attribute-6 { top: 27%; left: 4%;}
+
+.stats{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(211, 197, 229 ,0.5); 
+    clip-path: polygon(50% 19.5%, 76% 34.5%, 76.5% 65%, 50% 80.5%, 23.5% 65%, 24% 34.5%); 
+
+}

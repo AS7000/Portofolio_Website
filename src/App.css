@@ -1,0 +1,52 @@
+:root {
+  --color1: #003135;
+  --color2: #024950;
+  --color3: #964734;
+  --color4: #0fa4af;
+  --color5: #afdde5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+.landing-page {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+
+section {
+  display: grid;
+}
+
+
+.connector{
+  height: 20vh;
+}
+
+#one{
+  background-color: var(--color5);
+  border-bottom: 5px solid black;
+}
+
+#two{
+  background: rgb(179,171,137);
+  background: linear-gradient(0deg, rgba(179,171,137,1) 6%, rgba(3,9,9,1) 89%);
+}
+
+#three{
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, #003135 6%, rgba(0,0,0,1) 89%);
+}

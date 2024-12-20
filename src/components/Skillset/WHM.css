@@ -1,0 +1,22 @@
+.Skillset{
+    position: relative;
+}
+
+.right_skill_panel{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    background-image: url('./WHM.jpg');
+    background-size: cover;
+    background-position: top center; /* Keeps the image centered */
+    background-repeat: no-repeat;
+    border-top: 5px solid black;
+    padding: 10vh;
+}
+
+    .right_skill_panel > h1{
+        font-size: 10rem;
+        color: white;
+        text-align: center; /* Optional: Center-align the text */
+    }

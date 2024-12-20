@@ -1,0 +1,177 @@
+:root {
+    --color1: #003135;
+    --color2: #024950;
+    --color3: #964734;
+    --color4: #0fa4af;
+    --color5: #afdde5;
+}
+
+.Job_contatiner {
+    grid-template-columns: 0.5fr 1fr;
+    position: relative;
+    padding: 20px;
+    gap: 20px;
+    margin-bottom: -5px;
+}
+.Job_contatiner.mode0 {
+    background: linear-gradient(to bottom, rgba(179,171,137,1), #759B96);
+}
+.Job_contatiner.mode1 {
+    background: rgb(34,164,147);
+    background: linear-gradient(0deg, rgba(34,164,147,1) 6%, rgba(117,155,150,1) 89%);
+}
+.Job_contatiner.mode2 {
+    background: rgb(34,164,147);
+    background: linear-gradient(180deg, rgba(34,164,147,1) 6%, rgba(12,85,89,1) 89%);
+}
+.Job_contatiner.mode3 {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 6%, rgba(12,85,89,1) 89%);}
+
+
+.Job_contatiner.odd {
+    grid-template-columns: 1fr 0.5fr;
+    position: relative;
+    padding: 20px;
+    gap: 10px;
+}
+
+/* Job Overview */
+.Job_contatiner > .Job_overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0px 40px;
+}
+
+.Job_contatiner > .Job_overview.odd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Job_overview > .Job_name {
+    font-size: 4rem;
+    color: var(--color3);
+}
+
+.Job_overview > .Job_name.odd {
+    font-size: 4rem;
+    color: var(--color3);
+    text-align: right;
+}
+
+.Job_overview > .Description {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+    text-align: justify;
+    max-width: 90%;
+}
+
+.Description.mode0 {
+
+}
+.Description.mode1 {
+    
+}
+.Description.mode2 {
+    
+}
+.Description.mode3 {
+    
+}
+
+
+/* Flexbox container for the skills */
+.Job_contatiner > .skills_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-height: auto;
+    margin: 0px 40px;
+
+}
+
+/* Flex item (each skill) */
+.skills_container > .skill.item {
+    flex: 0 1 45%; /* Initially, each item takes 45% of the container width */
+    height: auto;
+    background-color: #1a3c40;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* On Hover */
+.skills_container > .skill.item:hover {
+    background-color: #1d4d50; 
+    transform: translateY(-5px); 
+}
+
+/* Skill content styling */
+.skill.item > p {
+    max-width: 95%;
+    text-align: justify;
+    line-height: 1.6;
+    word-spacing: 0.1em;
+}
+
+.title_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.title_container > h1 {
+    font-size: clamp(1rem, 1.4rem, 2rem);
+}
+
+.icon {
+    max-width: 70px;
+    max-height: 70px;
+    object-fit: cover;
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* For large screens (desktops) */
+@media (min-width: 841px) {
+    .skills_container > .skill.item {
+        flex: 0 1 45%; /* Show 3 items per row on large screens */
+    }
+}
+
+
+/* For small screens (mobile devices) */
+@media (max-width: 840px) {
+    .Job_contatiner > .skills_container {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        scroll-behavior: smooth;
+        gap: 10px;
+    }
+
+    .skills_container > .skill.item {
+        flex: 0 0 25%; /* Each item takes 80% of the width on small screens */
+        height: 25vh;
+        min-width: 250px;
+    }
+
+    .skills_container::-webkit-scrollbar {
+        display: none; /* Hide scrollbar */
+    }
+
+    .skills_container {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}

@@ -1,0 +1,56 @@
+:root{
+    --color1: #003135;
+    --color2: #024950;
+    --color3: #964734;
+    --color4: #0fa4af;
+    --color5: #afdde5;
+}
+
+
+.card-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Control the height of the Number for consistency */
+.card-container > .Number {
+    font-size: 7rem;
+    margin-left: 14.5%;
+    margin-bottom: 10px;
+    color: var(--color4);
+    height: 120px;  /* Set a consistent height for all numbers */
+    line-height: 120px;  /* Vertically center the number if needed */
+}
+
+/* Adjust content area */
+.content {
+    display: flex;  /* Use flexbox for the content to align in a row */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 14.5%;
+    height: 150px;  /* Set a consistent height across all cards */
+}
+
+.content > .Degree {
+    color: var(--color2);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.content > .Description {
+    font-size: 1rem;
+    font-weight: 450;
+    color: var(--color2);
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/* Optional: Add padding or spacing between cards for better alignment */
+.card-container {
+    margin-bottom: 20px;  /* Adds spacing between card components */
+}
+
