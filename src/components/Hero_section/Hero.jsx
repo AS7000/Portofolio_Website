@@ -156,15 +156,12 @@ export default function Hero({ reference, isDarkMode }) {
       <Panel panel_ref={leftPanelRef} className={!isDarkMode ? 'profile-pic light-mode-img' : 'profile-pic dark-mode-img'} />
       <Panel panel_ref={rightPanelRef} className={!isDarkMode ? 'banner-container light-mode-panel' : 'banner-contatiner dark-mode-panel'}>
         <div className="banner-title">
-          <span id='start'>I am ... <span id='name'><br /> Mohamed <br />Shaheen</span><br /></span>
+          <span id='start'>I am ... <br /><span id='name'><br /> Mohamed <br />Shaheen</span><br /></span>
         </div>
         <div className="banner-title" id='txt'>
           <span class='glitch top'>{job_titles[titleIndex]}</span><br />
           <span class='glitch bottom'>{job_titles[titleIndex]}</span><br />
         </div>
-
-
-
         <div className='banner-description'>
           <h2 >
             <strong>“</strong> If you require innovation, passion and skills, I’m the man for the job. <strong>”</strong>

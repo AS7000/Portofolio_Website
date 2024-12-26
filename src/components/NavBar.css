@@ -1,13 +1,31 @@
+.section.Header {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Space out elements */
+  align-items: center; /* Vertically align items */
+  z-index: 10;
+  background-color: #003135;
+  position: sticky;
+  top: 0;
+  padding: 0 1rem; /* Add padding for spacing */
+  height: fit-content; 
+  color: white;
+  min-height: 8vh;
+
+}
+
+
+
 .Navbar {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: flex-end; /* Align components to the right */
+  align-items: center;
   font-weight: bold;
   font-size: large;
-  width: 100%;
-  height: 100%;
-  gap: 40px; 
+  gap: 40px; /* Maintain spacing between components */
+  flex-grow: 1; /* Allow the Navbar to grow and take available space */
 }
+
+
 
 .Navbar > .Nav-component {
   margin: 5px;
@@ -21,14 +39,62 @@
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-
-.Name{
-  padding: 2vh;
+.Name {
+  flex-shrink: 0; /* Prevent shrinking of the name */
   font-weight: bold;
-  align-self: flex-start;
-  justify-self: baseline;
   font-family: Arizonia, Montserrat, Arial, Helvetica, sans-serif;
   font-size: xx-large;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .section.Header {
+    flex-direction: column; /* Stack items vertically */
+    padding: 0.5rem; /* Reduce padding */
+    min-height: 5vh;
+  }
+
+  .Navbar {
+    flex-direction: column; /* Stack navbar components */
+    align-items: center; /* Center navbar items */
+    gap: 20px; /* Reduce gap between components */
+  }
+
+  .Name {
+    font-size: 1.5rem; /* Adjust font size for readability */
+    margin-bottom: 20px;
+
+  }
+}
+
+
+
+
+/*
+//Not Used yet
+
+.theme-toggle{
+  justify-self: center;
+  align-self: center;
+}
+
+.light-mode-icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  color: #ff6347;
+  transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.dark-mode-icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  color: #ff6347;
+  transition: transform 0.3s ease, color 0.3s ease; 
 }
 
 .light-mode {
@@ -52,32 +118,4 @@
   border: none;
 }
 
-.section.Header {
-  grid-template-columns: 0.8fr 0.7fr 0.8fr 0.8fr;
-  z-index: 10;
-  background-color: #003135;
-  position: sticky;
-  align-items: center; 
-  height: fit-content; 
-
-  top: 0;
-}
-
-.theme-toggle{
-  justify-self: center;
-  align-self: center;
-}
-
-.light-mode-icon:hover {
-  transform: scale(1.2);
-  cursor: pointer;
-  color: #ff6347;
-  transition: transform 0.3s ease, color 0.3s ease; 
-}
-
-.dark-mode-icon:hover {
-  transform: scale(1.2);
-  cursor: pointer;
-  color: #ff6347;
-  transition: transform 0.3s ease, color 0.3s ease; 
-}
+*/

@@ -88,6 +88,7 @@
         color: #0073e6; /* Blue color for links */
         font-weight: bold;
         transition: color 0.3s, transform 0.3s;
+        font-size: 1vw;
     }
     .contact-link:hover {
         color: #005bb5;

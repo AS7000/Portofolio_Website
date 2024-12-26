@@ -21,10 +21,7 @@ body {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
-.landing-page {
-  display: grid;
-  grid-template-rows: auto;
-}
+
 
 
 section {
@@ -33,7 +30,7 @@ section {
 
 
 .connector{
-  height: 20vh;
+  min-height: 20vh;
 }
 
 #one{
