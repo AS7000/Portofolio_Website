@@ -8,41 +8,57 @@
 
 
 .card-container {
-    width: 100%;
-    height: auto;
+    background-color: var(--color5); /* Example background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%; /* Take full width of the grid column */
+    height: auto;
+    text-align: center; /* Center-align all text inside */
 }
 
-/* Control the height of the Number for consistency */
-.card-container > .Number {
-    font-size: 7rem;
-    margin-left: 14.5%;
-    margin-bottom: 10px;
-    color: var(--color4);
-    height: 120px;  /* Set a consistent height for all numbers */
-    line-height: 120px;  /* Vertically center the number if needed */
+/* Responsive logo styling */
+.card-container > .Number-logo {
+    width: auto; /* Allows flexibility for varying widths */
+    height: 8rem; /* Set a consistent height */
+    max-width: 100%; /* Ensure it doesn't overflow the container */
+    object-fit: contain; /* Ensures the image scales without distortion */
+    display: block; /* Avoid inline spacing issues */
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
 }
+
 
 /* Adjust content area */
 .content {
-    display: flex;  /* Use flexbox for the content to align in a row */
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-left: 14.5%;
-    height: 150px;  /* Set a consistent height across all cards */
+    margin-top: 10px;
+    text-align: left;
+
 }
 
 .content > .Degree {
     color: var(--color2);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
+    min-height: 3rem; /* Adjust this to ensure space for 2 lines of text */
+    line-height: 1.5; /* Control the line spacing */
+    text-align: center; /* Center-align text */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    text-overflow: ellipsis; /* Truncate if content is too long */
+    overflow: hidden; /* Hide excess content */
+    white-space: normal; /* Allow wrapping to the next line */
 }
+
 
 .content > .Description {
     font-size: 1rem;
+    text-align: justify;
     font-weight: 450;
     color: var(--color2);
     margin-bottom: 0;

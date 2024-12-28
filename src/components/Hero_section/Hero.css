@@ -4,6 +4,8 @@
     grid-template-rows: auto;
     height: 82vh;
     width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Include padding in the element's total width */
+
 }
 
 /* Banner Container Adjustments */
@@ -19,6 +21,7 @@
     padding: 20px;
     max-width: 100%;
     box-sizing: border-box;
+
 }
 
 .banner-title {
@@ -112,6 +115,7 @@
     font-size: clamp(2rem, 8vw, 4.5rem); /* Responsive font size for glitch text */
     position: absolute;
     padding: 0px;
+    margin-left: 30px;
     font-weight: 500;
     color: black;
     background-color: aquamarine;
