@@ -7,20 +7,23 @@ import React, { useEffect, useRef, useState } from 'react';
 
 export default function Hero({ reference, isDarkMode }) {
 
-
-  const job_titles = ['AI Engineer', 'Data Scientist', 'Web Developer', 'Full Stack Developer']
+  const job_titles = ['AI Engineer','', 'Data Scientist','', 'Web Developer','', 'Full Stack Developer'];
   const [titleIndex, setTitleIndex] = useState(0); // To track the current title
   const leftPanelRef = useRef(null);
   const rightPanelRef = useRef(null);
+  const titleIndexRef = useRef(titleIndex); // Use ref to track the current title index
+
 
 
   useEffect(() => {
-
-    const updateTitle = () => {
-      setTitleIndex((prevIndex) => (prevIndex + 1) % 4);
-    };
-
     // Slide-in animation using fromTo for the left panel
+    const updateTitle = () => {
+      const nextTitleIndex = (titleIndexRef.current + 1) % 8; // Calculate the next index
+      setTitleIndex(nextTitleIndex); // Update state
+      titleIndexRef.current = nextTitleIndex; // Update the ref to reflect the new title index
+      console.log(titleIndexRef.current);
+    };
+    
     gsap.fromTo(
       leftPanelRef.current,
       {
@@ -50,6 +53,7 @@ export default function Hero({ reference, isDarkMode }) {
         ease: 'power2.out',
       }
     );
+
     const tl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
 
     tl.fromTo('.glitch', 
@@ -87,7 +91,7 @@ export default function Hero({ reference, isDarkMode }) {
         { x: 60, duration: 0.5, ease: 'power4.inOut' }, // Ending state
         'split'
       )
-      .call(updateTitle, [],'split') // Call updateTitle at this point
+      .call(updateTitle) // Update the title index here
       .add('return', '+=0.01') // The "return" label will trigger right after the previous animations
       .fromTo('.top', 
         { x: -60 }, // Starting state (after moving left)
@@ -144,12 +148,8 @@ export default function Hero({ reference, isDarkMode }) {
       .fromTo('.glitch', 
         { scaleY: 1.1 }, // Starting state
         { scaleY: 1, duration: 0.04, ease: 'power4.inOut' } // Ending state
-      )
-      ;
+      );
   }, []);
-
-
-
 
   return (
     <section ref={reference} className="Hero">
@@ -159,15 +159,14 @@ export default function Hero({ reference, isDarkMode }) {
           <span id='start'>I am ... <br /><span id='name'><br /> Mohamed <br />Shaheen</span><br /></span>
         </div>
         <div className="banner-title" id='txt'>
-          <span class='glitch top'>{job_titles[titleIndex]}</span><br />
-          <span class='glitch bottom'>{job_titles[titleIndex]}</span><br />
+          <span className='glitch top'>{job_titles[titleIndex]}</span><br />
+          <span className='glitch bottom'>{job_titles[titleIndex]}</span><br />
         </div>
         <div className='banner-description'>
           <h2 >
             <strong>“</strong> If you require innovation, passion and skills, I’m the man for the job. <strong>”</strong>
           </h2>
         </div>
-        
       </Panel>
     </section>
   );

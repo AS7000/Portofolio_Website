@@ -7,13 +7,6 @@ import './NavBar.css';
 export default function Navbar({ isDarkMode, toggleDarkMode, scrollToHome, scrollToProjects }) {
 
    /*
-
-          const handleToggle = () => {
-            gsap.fromTo(buttonRef.current, { scale: 1 }, { scale: 0.9, duration: 0.1, yoyo: true, repeat: 1 });
-            toggleDarkMode();
-          };
-
-          //extra code
           <div ref={themeToggleRef} className="theme-toggle">
           <button
             ref={buttonRef}
@@ -25,31 +18,35 @@ export default function Navbar({ isDarkMode, toggleDarkMode, scrollToHome, scrol
             </div>
           </button>
         </div>
+          useEffect(() => {
+            gsap.fromTo(themeToggleRef.current, { opacity: 0 }, { opacity: 1, duration: 0.5 });
+          }, []);
+
+          useEffect(() => {
+            gsap.fromTo(iconRef.current, { rotation: 0 }, { rotation: 360, duration: 0.5 });
+          }, [isDarkMode]);
+
+          const themeToggleRef = useRef(null);
+          const iconRef = useRef(null);
   */
 
   const [lastScrollY, setLastScrollY] = useState(0);
   const navbarRef = useRef(null);
-  const themeToggleRef = useRef(null);
-  //const buttonRef = useRef(null);
-  const iconRef = useRef(null);
+ 
 
-  useEffect(() => {
-    gsap.fromTo(themeToggleRef.current, { opacity: 0 }, { opacity: 1, duration: 0.5 });
-  }, []);
-
-  useEffect(() => {
-    gsap.fromTo(iconRef.current, { rotation: 0 }, { rotation: 360, duration: 0.5 });
-  }, [isDarkMode]);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      console.log(currentScrollY)
+
       if (currentScrollY < lastScrollY) {
-        gsap.to(navbarRef.current, { y: 0, duration: 0.5, ease: "power2.out" });
-      } else {
-        gsap.to(navbarRef.current, { y: -100, duration: 0.5, ease: "power2.out" });
+        gsap.to(navbarRef.current, { y: 0, duration: 0.5, ease: 'power2.out' });
+      } else if (currentScrollY > lastScrollY) {
+        gsap.to(navbarRef.current, { y: -200, duration: 0.5, ease: 'power2.out' });
       }
-      setLastScrollY(currentScrollY);
+
+      setLastScrollY(currentScrollY); // Update the scroll position
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -58,7 +55,7 @@ export default function Navbar({ isDarkMode, toggleDarkMode, scrollToHome, scrol
 
 
   return (
-    <header className="section Header">
+    <header ref={navbarRef} className="section Header">
       <div className="Name">Mohamed Shaheen</div>
       <nav className={`Navbar`}>
         <div className="Nav-component">Home</div>

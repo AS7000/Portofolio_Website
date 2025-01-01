@@ -18,7 +18,7 @@ export default function JobTitle({ isDarkMode, Job_id, colormode}) {
                     <h1 className='Job_name'>
                         {Job_id === 0 ? (
                             <>
-                                <span style={{ fontSize: '2rem', color: 'black' }}>
+                                <span className="custom-text">
                                     I am your ...<br />
                                 </span>
                                 {title}

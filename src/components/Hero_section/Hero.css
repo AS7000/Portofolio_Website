@@ -5,6 +5,7 @@
     height: 82vh;
     width: 100%; /* Ensure full width */
     box-sizing: border-box; /* Include padding in the element's total width */
+    margin-top: 8vh; /* Adjust this value as needed */
 
 }
 

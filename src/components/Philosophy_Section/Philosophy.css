@@ -30,8 +30,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 2rem; /* Optional: Add some padding for better spacing */
-    transform: translateY(-5%); /* Move upward */
+    padding: 2rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 1); /* Add a shadow for depth */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
 }
@@ -55,4 +54,53 @@
     font-size: 2rem;          /* Enlarges the first letter */
     font-weight: bold;        /* Makes the first letter bold */
     color: var(--color4);     /* Changes the first letter's color */
+}
+
+@media (max-width: 1024px) {
+    .philosophy {
+        grid-template-columns: 1fr;
+    }
+
+    .my_philosophy > h1 {
+        font-size: 3rem;
+    }
+
+    .philosophy-text > p {
+        font-size: 1.5rem;
+    }
+    .picture{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .philosophy > .my_philosophy {
+        padding: 1.5rem;
+    }
+
+    .my_philosophy > h1 {
+        font-size: 2.5rem;
+    }
+
+    .philosophy-text > p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .philosophy > .my_philosophy {
+        padding: 1rem;
+    }
+
+    .my_philosophy > h1 {
+        font-size: 2rem;
+    }
+
+    .philosophy-text > p {
+        font-size: 1rem;
+    }
+
+    .philosophy > .picture {
+        height: 300px; /* Adjust the image height for smaller screens */
+    }
 }
