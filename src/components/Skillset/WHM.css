@@ -1,22 +1,53 @@
-.Skillset{
+/* General Styles */
+.Skillset {
     position: relative;
 }
 
-.right_skill_panel{
+.right_skill_panel {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: space-around;
+    align-items: center; /* Aligns content horizontally in the center */
+    justify-content: center; /* Vertically centers content */
     background-image: url('./WHM.jpg');
     background-size: cover;
-    background-position: top center; /* Keeps the image centered */
+    background-position: top center;
     background-repeat: no-repeat;
     border-top: 5px solid black;
     padding: 10vh;
+    text-align: center; /* Ensures text is centered */
 }
 
-    .right_skill_panel > h1{
-        font-size: 10rem;
-        color: white;
-        text-align: center; /* Optional: Center-align the text */
+/* Heading Styles */
+.right_skill_panel > h1 {
+    font-size: 10rem; /* Default large size */
+    color: white;
+    margin: 0;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .right_skill_panel > h1 {
+        font-size: 7rem; /* Smaller font for medium screens */
     }
+    .right_skill_panel {
+        padding: 8vh; /* Reduce padding on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .right_skill_panel > h1 {
+        font-size: 4rem; /* Even smaller font size for mobile */
+    }
+    .right_skill_panel {
+        padding: 5vh; /* Adjust padding for smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .right_skill_panel > h1 {
+        font-size: 2.5rem; /* Very small font for small mobile screens */
+    }
+    .right_skill_panel {
+        padding: 3vh; /* Reduced padding for very small screens */
+    }
+}
