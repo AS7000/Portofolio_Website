@@ -18,7 +18,7 @@ export default function Hero({ reference, isDarkMode }) {
   useEffect(() => {
     // Slide-in animation using fromTo for the left panel
     const updateTitle = () => {
-      const nextTitleIndex = (titleIndexRef.current + 1) % 8; // Calculate the next index
+      const nextTitleIndex = (titleIndexRef.current + 1) % 4; // Calculate the next index
       setTitleIndex(nextTitleIndex); // Update state
       titleIndexRef.current = nextTitleIndex; // Update the ref to reflect the new title index
       console.log(titleIndexRef.current);
