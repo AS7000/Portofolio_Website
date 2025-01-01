@@ -7,7 +7,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 export default function Hero({ reference, isDarkMode }) {
 
-  const job_titles = ['AI Engineer','', 'Data Scientist','', 'Web Developer','', 'Full Stack Developer'];
+  const job_titles = ['AI Engineer', 'Data Scientist', 'Web Developer', 'Full Stack Developer'];
   const [titleIndex, setTitleIndex] = useState(0); // To track the current title
   const leftPanelRef = useRef(null);
   const rightPanelRef = useRef(null);
