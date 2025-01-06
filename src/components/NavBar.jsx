@@ -58,8 +58,8 @@ export default function Navbar({ isDarkMode, toggleDarkMode, scrollToHome, scrol
     <header ref={navbarRef} className="section Header">
       <div className="Name">Mohamed Shaheen</div>
       <nav className={`Navbar`}>
-        <div className="Nav-component">Home</div>
-        <div className="Nav-component">Projects</div>
+        <div className="Nav-component" onClick={scrollToHome}>Home</div>
+        <div className="Nav-component" onClick={scrollToProjects}>Projects</div>
       </nav>
     </header>
   );
