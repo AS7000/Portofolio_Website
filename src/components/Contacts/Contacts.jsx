@@ -11,8 +11,12 @@ export default function Contacts({ isDarkMode }) {
             </div>
             <div class="contact-details">
                 <div class="contact-item">
-                    <h3>Email:</h3>
-                    <p><a href="mailto:mohamedshaheen20.ea@gmail.com" class="contact-link email-link">mohamedshaheen20.ea@gmail.com</a></p>
+                <h3>Email:</h3>
+                <p>
+                    <a href="mailto:mohamedshaheen20.ea@gmail.com" class="contact-link">
+                        mohamedshaheen20.ea@gmail.com
+                    </a>
+                </p>
                 </div>
                 <div class="contact-item">
                     <h3>Social Media @ </h3>

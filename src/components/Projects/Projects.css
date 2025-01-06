@@ -1,4 +1,4 @@
-:root{
+:root {
     --color1: #003135;
     --color2: #024950;
     --color3: #964734;
@@ -6,48 +6,114 @@
     --color5: #afdde5;
 }
 
-
 .cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
     padding: 20px;
+    box-sizing: border-box; /* Ensures consistent padding */
 }
 
+/* Intro card styles */
 .intro-card {
     background-color: var(--color1);
-    text-align: center;
-    font-size: 2rem;
     text-align: left;
+    font-size: 2rem;
     margin-bottom: 20px;
     flex: 0 1 45%;
     min-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
 }
 
+/* End card styles */
 .end-card {
     background-color: var(--color1);
     font-size: 2rem;
-    text-align: left;
+    text-align: center;
     flex: 0 1 45%;
     min-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .projects_end_title {
-    font-size: 3em;
+    font-size: 2.5em; /* Adjusted for better scaling */
     color: white;
+    text-align: center;
+    margin: 0;
 }
 
 .projects_title {
-    font-size: 3em;
+    font-size: 2.5em; /* Adjusted for responsiveness */
     color: var(--color3);
+    margin: 0;
 }
 
+/* Project card styles */
 .card {
-    flex: 0 1 45%;
-    min-width: 300px;
+    flex: 0 1 45%; /* Two cards per row */
+    min-width: 300px; /* Minimum size */
     height: auto;
+    border-radius: 10px;
+    background-color: var(--color4);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+
+@media (max-width: 1024px) {
+    .cards-container {
+        gap: 15px; /* Reduce spacing */
+        padding: 15px;
+    }
+
+    .intro-card, .end-card {
+        flex: 0 1 100%; /* Full-width for intro and end cards */
+    }
+
+    .projects_title, .projects_end_title {
+        font-size: 2em; /* Reduce title size */
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 800px) {
+    .cards-container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        gap: 20px; /* Maintain spacing between items */
+        padding: 10px; /* Compact padding */
+    }
+
+    .intro-card, .end-card, .card {
+        flex: 0 1 90%; /* Allow items to grow and shrink naturally */
+        min-width: 90%; /* Full width */
+        max-width: 400px; /* Optional: Limit max width for better readability */
+        text-align: center; /* Center text content */
+    }
+
+    .projects_title, .projects_end_title {
+        font-size: 1.8em; /* Adjust title size for small screens */
+    }
+}
+
+
+/* Extra small screens (very small devices) */
+@media (max-width: 480px) {
+    .projects_title, .projects_end_title {
+        font-size: 1.5em; /* Smaller title size */
+    }
+
+    .intro-card, .end-card, .card {
+        padding: 10px;
+    }
 }
